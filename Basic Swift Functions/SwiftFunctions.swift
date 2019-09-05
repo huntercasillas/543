@@ -58,22 +58,22 @@ func coins(cents: Int) {
         // Calculate quarters
         while (current - 25) >= 0 {
             quarters += 1
-            current = current - 25
+            current -= 25
         }
         // Calculate dimes
         while (current - 10) >= 0 {
             dimes += 1
-            current = current - 10
+            current -= 10
         }
         // Calculate nickels
         while (current - 5) >= 0 {
             nickels += 1
-            current = current - 5
+            current -= 5
         }
         // Calculate pennies
         while (current - 1) >= 0 {
             pennies += 1
-            current = current - 1
+            current -= 1
         }
         
         // Print answer
