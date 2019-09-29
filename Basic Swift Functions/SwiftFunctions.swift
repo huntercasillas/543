@@ -29,7 +29,7 @@ func factorial(n: Int) -> Int? {
     } else {
         return n * factorial(n: n - 1)!
     }
-}
+} 
 
 // Compute the sum of all integers between two given integers (inclusive)
 func sum(first: Int, second: Int) -> Int {
