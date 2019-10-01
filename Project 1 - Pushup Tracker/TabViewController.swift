@@ -14,13 +14,12 @@ class TabViewController: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLoad()
         self.delegate = self
         self.tabBarController?.tabBar.tintColor = TabViewController.tintColor
-        // Do any additional setup after loading the view.
     }
     
+    static var tintColor = UIColor(red: 0.00/255, green: 55.00/255, blue: 70.00/255, alpha: 1.00)
+    
+    // Change status bar text color to white
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
-    static var textColor = UIColor(red: 254.00/255, green: 167.00/255, blue: 0.00/255, alpha: 1.00)
-    static var tintColor = UIColor(red: 0.00/255, green: 55.00/255, blue: 70.00/255, alpha: 1.00)
 }

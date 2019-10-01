@@ -20,34 +20,40 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIToolbarDelegat
         datePicker.setValue(TabViewController.tintColor, forKeyPath: "textColor")
         datePicker.setValue(false, forKeyPath: "highlightsToday")
         addButton.layer.borderWidth = 3
-        addButton.layer.masksToBounds = false
-        addButton.layer.borderColor = TabViewController.textColor.cgColor
-        addButton.layer.cornerRadius = (addButton.frame.height/2)
-        addButton.clipsToBounds = true
     }
     
     var currentPushups = 0
     var currentDate: Date = Date()
-    
+    @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var pushupField: UITextField!
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet var toolBar: UIToolbar!
+
+    // Save user defaults
+    func saveDefaults() {
+        let defaults = UserDefaults.standard
+        defaults.set(HomeViewController.allPushups, forKey: "pushups")
+        defaults.set(HomeViewController.allDates, forKey: "dates")
+        defaults.synchronize()
+    }
     
+    // Change status bar text color to white
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        textField.inputAccessoryView = toolBar
-        return true
+    // Dismiss keyboard
+    @IBAction func doneButton(_ sender: Any) {
+        pushupField.resignFirstResponder()
     }
     
+    // Update selected date
     @IBAction func dateSelection(_ sender: Any) {
         currentDate = datePicker.date
     }
     
-    @IBOutlet weak var pushupField: UITextField!
-    
-    @IBOutlet weak var addButton: UIButton!
-    
+    // Save pushup entry and add to tableview on home controller
     @IBAction func addAction(_ sender: Any) {
         if pushupField.text?.isEmpty ?? true {
             view.endEditing(true)
@@ -62,6 +68,9 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIToolbarDelegat
             currentPushups = Int(pushupField.text ?? "0") ?? 0
             let savedPushup = SavedPushup(pushups: currentPushups, date: currentDate)
             HomeViewController.pushupList.append(savedPushup)
+            HomeViewController.allPushups.append(currentPushups)
+            HomeViewController.allDates.append(currentDate)
+            saveDefaults()
             pushupField.resignFirstResponder()
             pushupField.text = ""
             if tabBarController != nil {
@@ -69,11 +78,10 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIToolbarDelegat
             }
         }
     }
-    @IBAction func doneButton(_ sender: Any) {
-        pushupField.resignFirstResponder()
+    
+    // Add custom tool bar to keyboard when user clicks textfield
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        textField.inputAccessoryView = toolBar
+        return true
     }
-    @IBOutlet var toolBar: UIToolbar!
-    
-    @IBOutlet weak var navigationBar: UINavigationBar!
-    
 }

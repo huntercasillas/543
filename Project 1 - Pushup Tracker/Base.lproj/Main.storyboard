@@ -210,7 +210,7 @@
                                                     <color key="textColor" red="0.0" green="0.2156862745" blue="0.27450980390000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="September 28th 2019" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4A-df-M9x">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="September 28, 2019" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4A-df-M9x">
                                                     <rect key="frame" x="20" y="23" width="219" height="40"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.2156862745" blue="0.27450980390000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
@@ -275,7 +275,6 @@
                             <constraint firstItem="6v9-5Y-kLF" firstAttribute="top" secondItem="hiY-q8-IRc" secondAttribute="bottom" constant="42" id="AuK-hO-dLf"/>
                             <constraint firstItem="6Fq-Ok-d1h" firstAttribute="leading" secondItem="4J7-MS-YN7" secondAttribute="leading" id="JKs-Lx-5qa"/>
                             <constraint firstItem="hiY-q8-IRc" firstAttribute="centerX" secondItem="FR9-Am-Yht" secondAttribute="centerX" id="MO8-f0-t2h"/>
-                            <constraint firstItem="n4A-df-M9x" firstAttribute="top" secondItem="FR9-Am-Yht" secondAttribute="topMargin" constant="155" id="TpP-1Y-Gv9"/>
                             <constraint firstItem="hiY-q8-IRc" firstAttribute="leading" secondItem="OLJ-4n-bga" secondAttribute="leading" id="Vdn-My-eVt"/>
                             <constraint firstItem="OLJ-4n-bga" firstAttribute="trailing" secondItem="cFY-T0-Dkn" secondAttribute="trailing" id="cv2-IU-jSv"/>
                             <constraint firstItem="6v9-5Y-kLF" firstAttribute="trailing" secondItem="4J7-MS-YN7" secondAttribute="trailing" constant="4" id="e0p-C9-PhF"/>
@@ -283,12 +282,10 @@
                             <constraint firstItem="cFY-T0-Dkn" firstAttribute="top" secondItem="hiY-q8-IRc" secondAttribute="bottom" constant="60" id="ege-MM-Ugu"/>
                             <constraint firstItem="6Fq-Ok-d1h" firstAttribute="top" secondItem="hiY-q8-IRc" secondAttribute="bottom" constant="8" id="j8T-NC-tIi"/>
                             <constraint firstItem="cFY-T0-Dkn" firstAttribute="top" secondItem="6Fq-Ok-d1h" secondAttribute="bottom" constant="8" id="jgV-08-7xL"/>
-                            <constraint firstItem="n4A-df-M9x" firstAttribute="centerY" secondItem="FR9-Am-Yht" secondAttribute="centerY" constant="-229" id="mNe-IY-bC8"/>
                             <constraint firstItem="OLJ-4n-bga" firstAttribute="leading" secondItem="cFY-T0-Dkn" secondAttribute="leading" id="nkO-mS-0Wg"/>
                             <constraint firstItem="6v9-5Y-kLF" firstAttribute="leading" secondItem="FR9-Am-Yht" secondAttribute="leadingMargin" constant="-21" id="qGW-Z1-7qp"/>
                             <constraint firstItem="n4A-df-M9x" firstAttribute="centerY" secondItem="1Vj-Rd-cqz" secondAttribute="centerY" id="qZC-9n-RTU"/>
                             <constraint firstItem="6Fq-Ok-d1h" firstAttribute="trailing" secondItem="OLJ-4n-bga" secondAttribute="trailing" id="rfg-6z-aio"/>
-                            <constraint firstItem="n4A-df-M9x" firstAttribute="leading" secondItem="FR9-Am-Yht" secondAttribute="leading" constant="20" id="skE-h2-hKP"/>
                             <constraint firstItem="hiY-q8-IRc" firstAttribute="trailing" secondItem="OLJ-4n-bga" secondAttribute="trailing" id="xag-N4-YX2"/>
                             <constraint firstItem="cFY-T0-Dkn" firstAttribute="bottom" secondItem="4J7-MS-YN7" secondAttribute="bottom" id="xoT-19-vr9"/>
                             <constraint firstItem="hiY-q8-IRc" firstAttribute="bottom" secondItem="OLJ-4n-bga" secondAttribute="bottom" id="ziD-ju-sfC"/>

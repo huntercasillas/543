@@ -13,23 +13,26 @@ class MoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationBar.shadowImage = UIImage()
         navigationBar.isTranslucent = true
     }
     
     @IBOutlet weak var logoButton: UIButton!
+    @IBOutlet weak var websiteButton: UIButton!
+    @IBOutlet weak var navigationBar: UINavigationBar!
+
+    // Open web view on logo click
     @IBAction func logoAction(_ sender: Any) {
         openWebView()
     }
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+    
+    // Open web view on link click
+    @IBAction func websiteAction(_ sender: Any) {
+        openWebView()
     }
     
-    @IBOutlet weak var navigationBar: UINavigationBar!
-    
-    
+    // Open custom web view to hundredpushups.com
     func openWebView() {
         let pushupURL = URL(string: "https://hundredpushups.com")!
         let config = SFSafariViewController.Configuration()
@@ -44,11 +47,9 @@ class MoreViewController: UIViewController {
 
         present(webViewController, animated: true)
     }
-
-    @IBOutlet weak var websiteButton: UIButton!
     
-    @IBAction func websiteAction(_ sender: Any) {
-        openWebView()
+    // Change status bar text color to white
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
-    
 }
