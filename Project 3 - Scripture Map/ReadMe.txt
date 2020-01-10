@@ -1,0 +1,3 @@
+I showed my application to my father. He suggested adding a few features to improve the user experience. He said it would be nice to be able to change the default zoom settings and said to add a settings tab to allow changing this along with the map type (satellite, hybrid, normal). He also wished there was a note when no geoPlaces were found for a specific chapter/scripture because showing the blank map with no pins seemed like a bug.
+
+Also, please note I will be using my late days for this project. 
